@@ -6,6 +6,8 @@ authors = ["Saker Lin <iamsaker.s001@gmail.com>"]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+fastapi = "^0.88.0"
+uvicorn = {extras = ["standard"], version = "^0.20.0"}
 
 [tool.poetry.dev-dependencies]
 
