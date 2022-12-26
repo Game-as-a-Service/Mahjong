@@ -1,0 +1,27 @@
+repos:
+  # black for coding style
+  - repo: https://github.com/ambv/black
+    rev: 22.8.0
+    hooks:
+    - id: black
+      language_version: python3.10
+      args:
+        - --line-length=100
+
+  # pylint for linter
+  # Disable pylint now
+  # - repo: https://github.com/pycqa/pylint
+  #   rev: v2.15.4
+  #   hooks:
+  #     - id: pylint
+  #       args: [
+  #           '-rn',
+  #           '-sn',
+  #           '--rcfile=pylintrc', 
+  #         ]
+
+  # mypy for typing check
+  # - repo: https://github.com/pre-commit/mirrors-mypy
+  #   rev: v0.982
+  #   hooks:
+  #   -   id: mypy
