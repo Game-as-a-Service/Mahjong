@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "Mahjong-as-a-Service"
+version = "0.1.0"
+description = ""
+authors = ["Saker Lin <iamsaker.s001@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.88.0"
+uvicorn = {extras = ["standard"], version = "^0.20.0"}
+
+[tool.poetry.dev-dependencies]
+colored = "*"
+httpx = "*"
+pytest = "*"
+pytest-cov = "*"
+python-dotenv = "*"
+pytest-mock = "^3.7.0"
+black = "^22.6.0"
+pre-commit = "^2.20.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

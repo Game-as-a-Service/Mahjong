@@ -1,0 +1,39 @@
+name: Code Quality
+on: 
+  pull_request:
+    branches: ["main", "release/*"]
+
+jobs:
+  quality-guard:
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10"]
+        poetry-version: [1.1.12]
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: ${{ matrix.python-version }}
+      
+      - name: Black format
+        uses: psf/black@stable
+        with:
+          options: "--check --verbose -l 100"
+          jupyter: true
+          version: "22.10.0"
+      
+      # Process linter
+      # - name: Install dependencies
+      #   run: |
+      #     python -m pip install --upgrade pip
+      #     pip install pylint
+
+      # - name: Lint with Pylint
+      #   run: |
+      #     pylint $(git ls-files '*.py')

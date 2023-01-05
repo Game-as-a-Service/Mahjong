@@ -9,7 +9,7 @@
 
 1. Tech Stack：
    * 後端語言：Python
-     * Framework：Fast API
+     * Framework: [Fast API](https://fastapi.tiangolo.com/)
      * DB： MongoDB
    * 前端：Vue 或 React (暫定)
 2. Practice Stack：
@@ -39,12 +39,12 @@
 
 ## GitHub Flow
 
-1. 團隊任一人皆可依據功能建立issue，並依據需求類型添加 Lebel 及指派人員處理
+1. 團隊任一人皆可依據功能建立 issue，並依據需求類型添加 Lebel 及指派人員處理
 2. 分支的建立規則：
-    *  分支名稱為dev和左斜線與 issue 編號結合
+    *  分支名稱為 dev 和左斜線與 issue 編號結合
     *  Pattern: `dev/${issueId}`，範例： dev/1 
-3. 本地開發測試完成之後，並push本地分支到遠端
-4. 發出Pull Request，於 commit 裡填寫 issue link，請求 Reviewer Review Code
+3. 本地開發測試完成之後，並 push 本地分支到遠端
+4. 發出 Pull Request，於 commit 裡填寫 issue link，請求 Reviewer Review Code
 5. 需有 2 人 Review PR
     * Mahjong Team members could review the PR.
 6. 待 Reviewer 均確認無誤後，通知開發人員已確認完成
