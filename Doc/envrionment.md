@@ -13,18 +13,27 @@ brew install direnv
 direnv allow
 ```
 
-3. Install Poetry and setup.
+3. Install Poetry and dependencies then set up a virtual environment.
 ```shell
 curl -sSL https://install.python-poetry.org | python3 -
 poetry install
-poetry shell
 poetry env use 3.10
+```
+
+4. Set up the git hook scripts.
+```shell
+poetry run pre-commit install
+```
+or
+```shell
+poetry shell
+pre-commit install
 ```
 
 ## Python Version
 > 3.10.7
 
-## [pyenv](https://github.com/pyenv/pyenv) (Optional)
+## [pyenv](https://github.com/pyenv/pyenv)
 1. Getting Pyenv (how to download please follow Pyenv's README)
 2. Set up your shell environment for Pyenv
 3. Restart your shell
@@ -38,7 +47,7 @@ cd /path/Mahjong && pyenv local 3.10.7
 ```
 
 ## [poetry](https://python-poetry.org/docs/)
-#### Install Poetry
+Install Poetry following below.
 #### For Mac users
 ```shell
 curl -sSL https://install.python-poetry.org | python3 -
@@ -67,6 +76,17 @@ eval "$(direnv hook bash)"
 - For zsh (~/.zshrc)
 ```shell
 eval "$(direnv hook zsh)"
+```
+
+## [pre-commit](https://pre-commit.com/)
+1. Installation
+```shell
+brew install pre-commit
+```
+2. Add a pre-commit configuration and create a file named `.pre-commit-config.yaml`
+3. Install the git hook scripts to set up the git hook scripts
+```shell
+pre-commit install
 ```
 
 ## Web Development
